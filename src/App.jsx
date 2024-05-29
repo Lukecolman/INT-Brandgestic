@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <div>
-    <h1 className="text-3xl bg-red-300 font-bold underline">
+    <h1 className="text-3xl bg-red-300  underline font-madefor font-extrabold">
       BRANDGESTIC
     </h1>
     </div>
