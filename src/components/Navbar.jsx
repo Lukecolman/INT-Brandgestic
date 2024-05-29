@@ -8,14 +8,14 @@ const Navbar = ({ menu }) => {
       <div className=' flex items-center'>
         {/* LOGO */}
         <div className="text-2xl font-bold ">
-          <a href="/">OCTO</a>
+          <a href="#">OCTO</a>
         </div>
 
         {/* NAVBAR FIRST ITEMS */}
         <ul className="pl-14 flex space-x-12 font-bold text-base ">
           {menu.map((item, index) => (
             <li key={index}>
-              <a href={item.link}>
+              <a href={item.link} className='text-animation'>
                 {item.title}
               </a>
             </li>
@@ -26,9 +26,9 @@ const Navbar = ({ menu }) => {
       {/* LOG AND QUOTE */}
       <ul className="pl-14 flex items-center space-x-12 font-bold text-base ">
           <li>
-            <a href="">Log in</a>
+            <a href="#" className='text-animation'>Log in</a>
           </li>
-          <li className='bg-octo-pink px-8 py-3.5'>
+          <li className='bg-octo-pink px-8 py-3.5 text-animation'>
             <a href="">Get a quote</a>
           </li>
           
