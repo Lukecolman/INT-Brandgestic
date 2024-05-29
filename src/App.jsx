@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-// import Header from './Header';
+import Header from './components/Header';
 import './index.css';
 
 function App() {
@@ -33,10 +33,11 @@ function App() {
   }
 
   return (
-    <>
+    <div className="flex flex-col h-screen">
       <Navbar menu={data.nav} />
-      {/* <Header title={data.home['header-title']} cta={data.home['header-cta']} /> */}
-    </>
+      <Header className="flex-grow" title={data.home['header-title']} cta={data.home['header-cta']} />
+      </div>
+
   );
 }
 

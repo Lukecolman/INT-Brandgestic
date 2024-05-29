@@ -4,10 +4,6 @@
 @tailwind utilities;
 
 
-body{
-  @apply bg-red-300;
-}
-
 .text-animation{
   display: block;
   transition: all .2s ease-in-out;
@@ -15,4 +11,12 @@ body{
 
 .text-animation:hover{
   transform: scale(1.05);
+}
+
+
+
+/* HEADER */
+.pentagon-title{
+  @apply h-[150.5px] w-[47px] bg-green-800 flex items-center justify-center;
+  
 }
