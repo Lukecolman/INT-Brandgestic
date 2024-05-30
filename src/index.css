@@ -17,6 +17,11 @@
 
 /* HEADER */
 
+/* CTA */
+.cta{
+  @apply mt-4 bg-octo-green-500 text-octo-green-900 rounded flex justify-center items-center gap-6 px-5 py-3 text-xl font-extrabold;
+  filter: drop-shadow(8px 8px 0px #d2abe4);
+}
 /* MENTIONS */
 .mentions-container{
   clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
