@@ -17,6 +17,13 @@
 
 /* HEADER */
 
+/* MENTIONS */
+.mentions-container{
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+  @apply bg-octo-pink h-16 w-[280px] text-white font-black relative flex items-center px-20 overflow-visible;
+  
+}
+
 
 
 /* IMG */

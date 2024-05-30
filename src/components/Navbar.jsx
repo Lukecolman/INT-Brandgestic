@@ -3,7 +3,7 @@ import React from 'react';
 
 const Navbar = ({ menu }) => {
   return (
-    <nav className=" font-madefor py-7 px-20 text-white absolute w-full z-50">
+    <nav className=" font-madefor py-7 px-16 text-white absolute w-full z-50">
       <div className="container flex items-center justify-between">
       <div className=' flex items-center'>
         {/* LOGO */}
