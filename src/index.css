@@ -57,7 +57,7 @@
 
 /* PENTAGON CONTAINER */
 .pentagon-container{
-  @apply bg-blue-400 w-[328.5px] h-[150.5px] absolute z-10 -left-[47px] top-[117px] flex;
+  @apply bg-octo-green-100 w-[328.5px] h-[150.5px] absolute z-10 -left-[47px] top-[117px] flex;
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 45%, 75% 0);
 
   .pentagon-title{
