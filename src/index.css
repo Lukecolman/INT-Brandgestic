@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
+/* GLOBAL */
 .text-animation{
   display: block;
   transition: all .2s ease-in-out;
@@ -16,7 +16,18 @@
 
 
 /* HEADER */
-.pentagon-title{
-  @apply h-[150.5px] w-[47px] bg-green-800 flex items-center justify-center;
-  
+
+
+
+/* IMG */
+
+/* PENTAGON CONTAINER */
+.pentagon-container{
+  @apply bg-blue-400 w-[328.5px] h-[150.5px] absolute;
+  clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 45%, 75% 0);
+
+  .pentagon-title{
+    @apply h-[150.5px] w-[47px] bg-green-800 flex items-center justify-center;
+    
+  }
 }
