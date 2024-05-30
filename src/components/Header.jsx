@@ -12,7 +12,7 @@ const Header = ({ title, cta }) => {
     </div>
 
     {/* IMG CONTAINTER */}
-    <div className="w-[48%] min-w-[48%] text-center relative">
+    <div className="w-[48%] min-w-[563px] text-center relative">
               {/* PENTAGON CONTAINER */}
               <div className='pentagon-container '>
             <div>

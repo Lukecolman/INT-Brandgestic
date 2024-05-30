@@ -3,16 +3,16 @@ import React from 'react';
 
 const Navbar = ({ menu }) => {
   return (
-    <nav className="bg-octo-green-900 font-madefor py-10 px-20 text-white">
+    <nav className=" font-madefor py-7 px-20 text-white absolute w-full z-50">
       <div className="container flex items-center justify-between">
       <div className=' flex items-center'>
         {/* LOGO */}
-        <div className="text-2xl font-bold ">
-          <a href="#">OCTO</a>
-        </div>
+          <a href="#">
+          <img className="h-9 w-[139]" src="/images/logos/octo-logo.svg" alt="" srcset="" />
+          </a>
 
         {/* NAVBAR FIRST ITEMS */}
-        <ul className="pl-14 flex space-x-12 font-bold text-base ">
+        <ul className="ml-14 flex gap-11 font-bold text-base ">
           {menu.map((item, index) => (
             <li key={index}>
               <a href={item.link} className='text-animation'>
@@ -24,11 +24,11 @@ const Navbar = ({ menu }) => {
       </div>
       
       {/* LOG AND QUOTE */}
-      <ul className="pl-14 flex items-center space-x-12 font-bold text-base ">
+      <ul className="pl-14 flex items-center gap-11 font-bold text-base ">
           <li>
             <a href="#" className='text-animation'>Log in</a>
           </li>
-          <li className='bg-octo-pink px-8 py-3.5 text-animation'>
+          <li className='bg-octo-green-900 px-8 py-3.5 text-animation'>
             <a href="">Get a quote</a>
           </li>
           
