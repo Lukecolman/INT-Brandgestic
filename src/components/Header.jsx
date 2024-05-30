@@ -9,8 +9,8 @@ const Header = ({ title, cta }) => {
             <div className='w-full p-4 text-center px-20  relative flex'>
 
                 {/* TITLE AND CTA */}
-                <div className='bg-red-200 self-center'>
-                    <h1 className='font-madefor text-2xl font-bold' dangerouslySetInnerHTML={{ __html: title }}></h1>
+                <div className='self-center mb-8'>
+                    <h1 className='text-[55px] font-normal font-madefor text-octo-green-500 max-w-md text-left' dangerouslySetInnerHTML={{ __html: title }}></h1>
 
                     {/* CTA */}
                     <button className='cta'>
