@@ -6,14 +6,22 @@ const Header = ({ title, cta }) => {
         <div className='font-madefor flex text-center bg-octo-green-900 h-full'>
 
             {/* TITLE CTA AND MENTIONS */}
-            <div className='w-full p-4 text-center px-20  relative flex'>
+            <div className='w-full p-4 text-center relative flex justify-center 
+            sm:px-20 sm:justify-start
+            '>
 
                 {/* TITLE AND CTA */}
-                <div className='self-center mb-12'>
-                    <h1 className='text-[55px] font-normal font-madefor text-octo-green-500 max-w-md text-left leading-tight mb-14' dangerouslySetInnerHTML={{ __html: title }}></h1>
+                <div className='  flex flex-col  self-center mb-12 just'>
+                    <h1 className='text-[40px] font-normal px-5 center  font-madefor text-octo-green-500  text-left leading-tight mb-14 
+                    sm:text-6xl sm:px-0 sm:block
+                    md:text-7xl 
+                    base:max-w-md base:text-[55px]
+                    xl:max-w-full xl:text-7xl
+                    ' 
+                    dangerouslySetInnerHTML={{ __html: title }}></h1>
 
                     {/* CTA */}
-                    <button className='cta'>
+                    <button className='cta bg-red-500 max-w-sm'>
                       <img src="/images/office-woman.png" alt="Comercial agent" className='h-11 bg-octo-pink rounded-full' />
                       {cta}
                       </button>
@@ -22,10 +30,10 @@ const Header = ({ title, cta }) => {
                 {/* MENTIONS */}
                 <div className='bg-octo-green-100 w-[100vw] h-[148px] -mx-20 absolute text-left bottom-0'>
                     <div className='relative'>
-                        <div className='mentions-container '>
-                            <h3 className='z-10'>Ass seen on!</h3>
+                        <div className='mentions-container'>
+                            <h3 className='z-10'>As seen on!</h3>
                         </div>
-                        <img src='/images/arrow.svg' alt='Arrow' className='absolute left-60 bottom-0 z-50' />
+                        <img src='/images/arrow.svg' alt='Arrow' className='absolute left-60 bottom-0 z-50 hidden sm:block' />
                     </div>
 
                     <Marquee autoFill className='z-0'>
@@ -45,7 +53,7 @@ const Header = ({ title, cta }) => {
             </div>
 
             {/* IMG CONTAINTER */}
-            <div className='w-[48%] min-w-[563px] text-center relative'>
+            <div className='w-[48%] min-w-[563px] text-center relative hidden base:block'>
 
                 {/* PENTAGON CONTAINER */}
                 <div className='pentagon-container '>
