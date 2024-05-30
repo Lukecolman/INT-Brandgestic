@@ -19,9 +19,25 @@
 
 /* CTA */
 .cta{
-  @apply mt-4 bg-octo-green-500 text-octo-green-900 rounded flex justify-center items-center gap-6 px-5 py-3 text-xl font-extrabold;
+  @apply mt-4 bg-octo-green-500 text-octo-green-900 flex justify-center items-center gap-6 px-5 py-3 text-xl font-extrabold;
   filter: drop-shadow(8px 8px 0px #d2abe4);
+  transition: all .2s ease-in-out;
+
 }
+.cta:hover{
+  transform: scale(1.03);
+  filter: drop-shadow(12px 10px 0px #d2abe4);
+
+
+}
+
+.cta:active{
+  transform: scale(1);
+  filter: drop-shadow(0px 0px 0px #d2abe4);
+  transition: all .08s ease-in-out;
+
+}
+
 /* MENTIONS */
 .mentions-container{
   clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
