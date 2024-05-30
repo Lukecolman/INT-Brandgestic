@@ -46,14 +46,26 @@ const Header = ({ title, cta }) => {
 
             {/* IMG CONTAINTER */}
             <div className='w-[48%] min-w-[563px] text-center relative'>
+
                 {/* PENTAGON CONTAINER */}
                 <div className='pentagon-container '>
-                    <div>
+                        {/* TITLE */}
                         <div className='pentagon-title'>
                             <p className='-rotate-90 font-black'>COVERED</p>
                         </div>
-                        <div>AMOUNT</div>
-                    </div>
+                        <div className='bg-red-100 w-full items-start justify-center z-30 flex flex-col text-octo-green-900 pl-12'>
+                          
+                          {/* AMOUNT COVERED */}
+                          <div className='relative font-extrabold text-[45px] leading-tight'>
+                            <div className="text-[23px] h-[57px] w-[57px] content-center rounded-full bg-octo-green-500 absolute -z-10 -left-10 bottom-4 pt-1">
+                              <span className=''>$</span>
+                            </div>
+                          <span>500K</span>
+                          </div>
+
+                          <span className='text-[23px] font-semibold'>$10.99 / month</span>
+
+                        </div>
                 </div>
 
                 {/* IMG */}
