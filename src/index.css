@@ -23,11 +23,19 @@
 
 /* PENTAGON CONTAINER */
 .pentagon-container{
-  @apply bg-blue-400 w-[328.5px] h-[150.5px] absolute;
+  @apply bg-blue-400 w-[328.5px] h-[150.5px] absolute z-50 -left-[47px] top-[117px];
   clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 45%, 75% 0);
 
   .pentagon-title{
-    @apply h-[150.5px] w-[47px] bg-green-800 flex items-center justify-center;
+    @apply h-[150.5px] w-[47px] bg-octo-green-500 flex items-center justify-center text-octo-green-900;
     
   }
+}
+
+
+.image-container{
+  @apply h-full overflow-hidden relative bg-octo-pink;
+  clip-path: polygon(26% 0, 100% 0, 100% 100%, 26% 100%, 0 82%, 0 18%);
+  
+
 }
