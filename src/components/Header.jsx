@@ -33,7 +33,7 @@ const Header = ({ title, cta }) => {
                         <div className='mentions-container'>
                             <h3 className='z-10'>As seen on!</h3>
                         </div>
-                        <img src='/images/arrow.svg' alt='Arrow' className='absolute left-60 bottom-0 z-50 hidden sm:block' />
+                        <img src='/images/arrow.svg' alt='Arrow' className='absolute left-60 bottom-0 z-20 hidden sm:block' />
                     </div>
 
                     <Marquee autoFill className='z-0'>
