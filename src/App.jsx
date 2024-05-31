@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className='w-full h-[100vh] flex justify-center items-center bg-octo-green-900 text-octo-green-500 font-madefor font-black text-xl'>Loading...</div>;
   }
 
   if (error) {
@@ -36,7 +36,7 @@ function App() {
     <div className="flex flex-col h-screen">
       <Navbar menu={data.nav} />
       <Header className="flex-grow" title={data.home['header-title']} cta={data.home['header-cta']} />
-      </div>
+    </div>
 
   );
 }

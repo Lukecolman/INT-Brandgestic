@@ -1,30 +1,27 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 
 const Navbar = ({ menu }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [menuAnimationClass, setMenuAnimationClass] = useState('');
+  const [setMenuItemsVisible] = useState(false);
+
+
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest('.mobile-menu') && !event.target.closest('.mobile-menu-button')) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
     if (isMobileMenuOpen) {
-      document.addEventListener('click', handleClickOutside);
+      setMenuAnimationClass('fade-out');
+      setTimeout(() => {
+        setIsMobileMenuOpen(false);
+        setMenuAnimationClass('');
+        setMenuItemsVisible(false);
+      }, 500); 
     } else {
-      document.removeEventListener('click', handleClickOutside);
+      setIsMobileMenuOpen(true);
+      setTimeout(() => {
+        setMenuItemsVisible(true);
+      }, 50); 
     }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [isMobileMenuOpen]);
+  };
 
   return (
     <nav className="font-madefor py-7 px-9 text-white absolute w-full z-50 md:px-16">
@@ -78,26 +75,28 @@ const Navbar = ({ menu }) => {
           )}
         </button>
 
-    {/* MOBILE MENU */}
+       {/* MOBILE MENU */}
+       <div className={`circle ${isMobileMenuOpen ? 'open' : ''}`}>
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 flex flex-col items-center mobile-menu font-bold bg-octo-pink text-octo-green-900  lg:hidden">
+        <div className="fixed inset-0 flex flex-col items-center mobile-menu font-bold text-octo-green-900  lg:hidden">
           <ul className="flex flex-col h-full mt-44 text-left gap-9 text-4xl">
             {menu.map((item, index) => (
-              <li key={index} className="fade-in">
+              <li key={index} className={menuAnimationClass}>
                 <a href={item.link} className="text-animation" onClick={toggleMobileMenu}>
                   {item.title}
                 </a>
               </li>
             ))}
-            <li className="fade-in">
+            <li className={menuAnimationClass}>
               <a href="#" className="text-animation" onClick={toggleMobileMenu}>Log in</a>
             </li>
           </ul>
-          <div className="bg-white px-[50px] py-[15px] text-animation fade-in text-center text-2xl mb-[67px]">
+          <div className={`bg-white px-[50px] py-[15px] text-animation ${menuAnimationClass} text-center text-2xl mb-[67px]`}>
             <a href="#">Get a quote</a>
           </div>
         </div>
       )}
+      </div>
       </div>
 
     </nav>

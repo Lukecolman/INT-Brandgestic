@@ -1,5 +1,5 @@
 import Marquee from 'react-fast-marquee';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const Header = ({ title, cta }) => {
     return (
